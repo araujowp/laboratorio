@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Lertexto {
 
@@ -15,8 +16,20 @@ public class Lertexto {
 		bufferedReader  = new BufferedReader(fileReader);
 	}
 	
-	public String ler() throws IOException {
+	public String getLinha() throws IOException {
 		return bufferedReader.readLine();
+	}
+	
+	public ArrayList<String> getLinhas() throws IOException{
+		
+		ArrayList<String> linhas = new ArrayList<String>();
+		
+		String linha = getLinha();
+		while(linha != null ) {
+			linhas.add(linha);
+			linha = getLinha();
+		}
+		return linhas;
 	}
 	
 }

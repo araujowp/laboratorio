@@ -10,10 +10,10 @@ public class TestaLerTexto {
 		try {
 			Lertexto lerTexto  = new Lertexto("c:\\teste\\arquivo.txt");
 			
-			String linha = lerTexto.ler();
+			String linha = lerTexto.getLinha();
 			while(linha != null) {
 				System.out.println(linha);
-				linha = lerTexto.ler();
+				linha = lerTexto.getLinha();
 			}
 			
 		} catch (IOException e) {
