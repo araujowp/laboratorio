@@ -8,7 +8,7 @@ public class TestaLerTexto {
 		System.out.println("vamos ler um texto e imprimir seu conteudo abaixo:");
 		
 		try {
-			Lertexto lerTexto  = new Lertexto("c:\\teste\\arquivo.txt");
+			LerTexto lerTexto  = new LerTexto("c:\\teste\\arquivo.txt");
 			
 			String linha = lerTexto.getLinha();
 			while(linha != null) {
